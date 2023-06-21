@@ -1,13 +1,12 @@
 import { cloneElement, Children, useEffect, useState } from 'react'
 import {FaChevronLeft, FaChevronRight} from 'react-icons/fa'
-
 import './Carousel.css'
 
 const PAGE_WIDTH=450
 
-export const Carousel = ({children}) => {
+export const Carousel = ({children, items}) => {
     const [pages, setPages] = useState([])
-    const [offset, setOffset]=useState(0)
+    const [offset, setOffset]=useState(0) 
 
     const handleLeftArrowClick = () => {
         console.log('handleLeftArrowClick')
@@ -32,21 +31,28 @@ export const Carousel = ({children}) => {
         })
     }
 
-    useEffect(() =>{
+
+
+     useEffect(() =>{ 
+
         setPages(
+            Array(items).fill(3).map((element, index)=>(
+                <div 
+                    style= {{
+                    height: '100%',
+                    minWidth: `${PAGE_WIDTH}px`,
+                    maxWidth: `${PAGE_WIDTH}px`,
+                    backgroundColor: `hsl(${index*50}, 100%, 50%)`
+                    }}
+                    key={index}
+                    className= 'item'> Item {index+1}</div>
+            
+            )) 
 
-            Children.map(children, (child) => {
-                return cloneElement(child, {
-                    style: {
-                        height: '100%',
-                        minWidth: `${PAGE_WIDTH}px`,
-                        maxWidth: `${PAGE_WIDTH}px`,
-                    },
-                })
-            })
         )
-    }, [])
+     }, [])
 
+    console.log(pages);
     return (
         <div className="main-container">
         <FaChevronLeft className="arrow" onClick={handleLeftArrowClick}/>

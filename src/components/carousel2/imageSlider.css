@@ -1,0 +1,38 @@
+.containerSliderStyles {
+    width: 100%;
+    height: 100%;
+}
+.slidesWithArrows {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+.slidesWithArrows>.arrow{
+    width: 40px;
+    height:40px;
+}
+.dotsContainer{
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    margin: 10px 0;
+}
+.dotsContainer svg{ 
+    width: 10px;
+    cursor: pointer;
+}
+.dotsContainer .dot {opacity: .3;} 
+.dotsContainer .dot.active {opacity: 1;}
+
+.slideStyles{
+    width: 100%;
+    height: 100%;
+    border-radius: 10px;
+}
+.slideStyles img{
+    width: 100%;
+    height: 100%;
+    border-radius: 10px;
+}

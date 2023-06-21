@@ -1,0 +1,30 @@
+nav ul {
+    display: flex;
+    margin: 0;
+    padding: 100px 0 20px 0;
+    gap: 0.5em;
+    justify-content: center;
+}
+nav ul li>*{
+    padding: 0.5em;
+    border: 1px solid black;
+    
+}
+nav ul li {
+    list-style: none;
+}
+
+nav ul li>*:hover , nav .active {
+    background: black;
+    color: white;
+}
+
+main {
+    padding: 50px 0;
+}
+footer {
+    position: absolute;
+    bottom: 10px;
+    left: 50%;
+    transform: translate(-50%, 0);    
+}
