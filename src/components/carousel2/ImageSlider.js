@@ -1,7 +1,8 @@
 import React, { useState } from "react";
 import { FaChevronLeft, FaChevronRight, FaCircle } from "react-icons/fa";
-import "./imageSlider.css";
-
+import './Image-slider.module.scss'
+/* import "./imageSlider.css";
+ */
 const ImageSlider = ({ slides }) => {
   const [currentIndex, setCurrentIndex] = useState(0);
 
