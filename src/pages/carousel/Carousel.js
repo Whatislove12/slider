@@ -1,6 +1,6 @@
 import { cloneElement, Children, useEffect, useState } from 'react'
 import {FaChevronLeft, FaChevronRight} from 'react-icons/fa'
-import './Carousel.css'
+import styles from './Carousel.module.scss'
 
 const PAGE_WIDTH=450
 
@@ -39,13 +39,10 @@ export const Carousel = ({children, items}) => {
             Array(items).fill(3).map((element, index)=>(
                 <div 
                     style= {{
-                    height: '100%',
-                    minWidth: `${PAGE_WIDTH}px`,
-                    maxWidth: `${PAGE_WIDTH}px`,
                     backgroundColor: `hsl(${index*50}, 100%, 50%)`
                     }}
                     key={index}
-                    className= 'item'> Item {index+1}</div>
+                    className= {styles.item}> Item {index+1}</div>
             
             )) 
 
@@ -54,17 +51,17 @@ export const Carousel = ({children, items}) => {
 
     console.log(pages);
     return (
-        <div className="main-container">
-        <FaChevronLeft className="arrow" onClick={handleLeftArrowClick}/>
-            <div className="window">
-                <div className="all-pages-container"
+        <div className={styles.main_container}>
+        <FaChevronLeft className={styles.arrow} onClick={handleLeftArrowClick}/>
+            <div className={styles.window}>
+                <div className={styles.all_pages_container}
                     style={{
                         transform: `translateX(${offset}px)`,
                     }}
                 >{pages}
                 </div>
             </div>
-            <FaChevronRight className="arrow" onClick={handleRightArrowClick}/>
+            <FaChevronRight className={styles.arrow} onClick={handleRightArrowClick}/>
         </div>
     )
 }

@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import { FaChevronLeft, FaChevronRight, FaCircle } from "react-icons/fa";
-import './Image-slider.module.scss'
+import styles from './Image-slider.module.scss'
 /* import "./imageSlider.css";
  */
 const ImageSlider = ({ slides }) => {
@@ -21,23 +21,21 @@ const ImageSlider = ({ slides }) => {
   }
 
 
-/*   style={{backgroundImage: `url(${slides[currentIndex].url})`}} */
-  console.log(slides[currentIndex].url)
 return (
-    <div className="containerSliderStyles">
-      <div className="slidesWithArrows">
-        <FaChevronLeft className="arrow" onClick={leftArrowClick} />
-        <div className="slideStyles">
+    <div className={styles.containerSlider}>
+      <div className={styles.slidesWithArrows}>
+        <FaChevronLeft onClick={leftArrowClick} />
+        <div className={styles.slideStyles}>
             <img src={slides[currentIndex].url} alt="" />
         </div>
-        <FaChevronRight className="arrow" onClick={rightArrowClick} />
+        <FaChevronRight onClick={rightArrowClick} />
       </div>
-      <div className="dotsContainer">
+      <div className={styles.dotsContainer}>
         {slides.map((slide, slideIndex) => (
           <div
             key={slideIndex}
             onClick={() => goToSlide(slideIndex)}
-            className={`${slideIndex === currentIndex ? 'active' : ''} dot`}
+            className={`${slideIndex === currentIndex ? styles.active : ''} ${styles.dot}`}
           >
             <FaCircle />
           </div>

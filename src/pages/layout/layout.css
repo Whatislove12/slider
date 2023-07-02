@@ -21,6 +21,8 @@ nav ul li>*:hover , nav .active {
 
 main {
     padding: 50px 0;
+    height: 100%;
+    width: 100%;
 }
 footer {
     position: absolute;
