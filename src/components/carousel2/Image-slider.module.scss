@@ -1,0 +1,43 @@
+.containerSlider{
+    @apply w-full h-full;
+}
+
+.slidesWithArrows {
+    @apply w-full h-full flex justify-center items-center gap-3;
+}
+
+
+    .slidesWithArrows>svg{
+        @apply w-10 h-10 cursor-pointer;
+    }
+
+.slideStyles {
+    @apply w-full h-full transition-transform duration-300 ease-in-out select-none;
+}
+    .slideStyles>img {
+        @apply w-full h-full rounded-xl ;
+    }
+.dotsContainer {
+    @apply flex justify-center gap-2 mt-3
+}
+    .dotsContainer svg {
+        @apply w-3;
+    }
+    .dotsContainer .dot {
+        @apply opacity-30 cursor-pointer;
+    }
+    .dotsContainer .dot.active {
+        @apply opacity-100;
+    }
+
+
+
+
+
+// HOME 
+    .containerImageSlider {
+        @apply w-5/12 h-72 mx-auto;
+    }
+    .componentTitle{
+        @apply text-3xl text-center font-semibold mb-4;
+    }

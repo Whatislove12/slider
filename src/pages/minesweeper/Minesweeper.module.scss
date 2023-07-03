@@ -1,0 +1,48 @@
+
+.contenedorGeneral {
+    @apply 2xl:max-w-[40vw] lg:max-w-[50vw] sm:max-w-[90vw] s:max-w-[90vw]
+     h-full m-auto relative
+
+
+}
+
+.header{
+    @apply w-full h-28 p-5 flex justify-between items-center bg-gray-400 rounded-t-2xl
+}
+.tituloGeneral{
+    @apply text-2xl font-semibold
+}
+.headerRightPart{
+    @apply flex justify-between items-center gap-6
+}
+    .headerRightPart>h2, button{
+        @apply text-xl
+    }
+    .headerRightPart>button{
+        @apply  rounded p-1  bg-green-300 shadow-lg transition ease-in-out hover:scale-110 duration-300 
+    
+    }
+
+
+.main {
+    @apply w-full h-4/5 p-4 bg-slate-600 grid gap-4 grid-cols-9 grid-rows-9 rounded-b-2xl
+}
+.box{
+    @apply aspect-square cursor-pointer transition ease-in-out delay-75 hover:scale-110 duration-300
+}
+
+
+
+
+.overlay{
+    @apply fixed inset-0 w-screen h-screen z-50 bg-slate-800 bg-opacity-50 flex justify-center flex-col items-center gap-4
+}
+    .overlay>h1{
+        @apply text-6xl font-semibold text-yellow-100 
+    }
+    .overlay>h2{
+        @apply text-2xl text-white font-semibold
+    }
+    .overlay>button{
+        @apply text-2xl text-white font-semibold transition ease-in-out hover:scale-110 duration-300
+    }
