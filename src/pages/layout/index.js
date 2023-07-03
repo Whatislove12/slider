@@ -12,7 +12,7 @@ export const Layout = () => {
   ]
 
   return (
-    <>
+    <div className='layout'>
     <header>
       <nav>
         <ul>
@@ -28,7 +28,7 @@ export const Layout = () => {
     <footer>
       <p>© Created with React.js by Vladislav Podymskiy</p>
     </footer>
-    </>
+    </div>
   )
 }
 

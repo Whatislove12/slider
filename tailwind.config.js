@@ -5,6 +5,9 @@ module.exports = {
   ],
   theme: {
     extend: {
+      screens: {
+        's': '220px',
+      },
       gridTemplateRows: {
         // Simple 8 row grid
         '9': 'repeat(9, minmax(0, 1fr))',
