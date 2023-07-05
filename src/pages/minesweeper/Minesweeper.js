@@ -68,7 +68,7 @@ export const Minesweeper = () => {
   return (
     <div className={styles.contenedorGeneral}>
       <div className={styles.header}> 
-        <h1 className={styles.tituloGeneral}>MineSweeper 2</h1>
+        <h1 className={styles.tituloGeneral}>MineSweeper</h1>
         <div className={styles.headerRightPart}>
             <h2>Score: {score}</h2>
             <button onClick={() => {reset()}}>Reset</button>

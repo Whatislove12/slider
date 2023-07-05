@@ -7,6 +7,7 @@ module.exports = {
     extend: {
       screens: {
         's': '220px',
+        'ss': '500px',
       },
       gridTemplateRows: {
         // Simple 8 row grid
