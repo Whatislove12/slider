@@ -59,17 +59,17 @@ footer {
   nav {
     position: absolute;
     top: 0;
-    left: -100%; /* Начальное положение меню за пределами экрана */
-    width: 200px; /* Ширина меню */
+    left: -100%; 
+    width: 200px; 
     height: auto;
-    border-radius: 10px; /* Высота меню, равная высоте окна */
+    border-radius: 10px; 
     background-color: #f1f1f1b7;
     transition: left 0.5s ease-in-out;
-    z-index: 10; /* Плавное изменение положения меню в течение 0.3 секунд */
+    z-index: 10; 
   }
 
   .open {
-      left: 0; /* Конечное положение меню при открытии */
+      left: 0; 
   }
 
   nav ul {
