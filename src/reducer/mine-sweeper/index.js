@@ -22,13 +22,13 @@ export const mineSweeperReducer = (state, action) => {
             if(!state.bomb.includes(action.payload)) {
                 color=[...color, action.payload]
                 if(!state.color.includes(action.payload)){
-                    state.score++;
+                    score++;
                 }
             }
             else {
                 check=!check
             }
-            return {...state, color:color, score:score, check:check}
+            return {...state, color, score, check}
         }
 
         default: return state

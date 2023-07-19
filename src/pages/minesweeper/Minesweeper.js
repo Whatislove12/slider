@@ -1,4 +1,4 @@
-import { useEffect, useReducer, useState } from "react";
+import React, { useEffect, useReducer } from "react";
 import styles from "./Minesweeper.module.scss";
 import { mineSweeperReducer } from "../../reducer/mine-sweeper";
 
