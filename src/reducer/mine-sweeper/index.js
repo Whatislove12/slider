@@ -16,7 +16,7 @@ export const mineSweeperReducer = (state, action) => {
         }
         case 'CHANGE-COLOR': {
             let color = state.color
-            let score = Number(state.score)
+            let score = state.score
             let check = state.check
 
             if(!state.bomb.includes(action.payload)) {
