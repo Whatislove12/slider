@@ -53,7 +53,7 @@ const ImageSlider = () => {
       <div className={styles.slidesWithArrows}>
       <Button onClick={leftArrowClick} icon = {<FaChevronLeft />} /> 
         <div className={styles.slideStyles}>
-        {images[currentIndex] ? <img src={'https://img.pokemondb.net/artwork/large/' + images[currentIndex].name + '.jpg'} /> : null}
+        {images[currentIndex] ? <img src={images[currentIndex].images[0]} /> : null}
         {images[currentIndex] && <p className={styles.namePokemon}>{images[currentIndex].name}</p>}
         </div>
         <Button onClick={rightArrowClick} icon = {<FaChevronRight />} /> 
