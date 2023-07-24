@@ -1,6 +1,4 @@
-.containerSlider{
-    @apply w-full h-full;
-}
+
 
 .slidesWithArrows {
     @apply w-full h-full flex justify-center items-center gap-3;
@@ -23,12 +21,11 @@
     .dotsContainer svg {
         @apply w-3;
     }
-    .dotsContainer .dot {
-        @apply opacity-30 cursor-pointer;
-    }
-    .dotsContainer .dot.active {
-        @apply opacity-100;
-    }
+
+.namePokemon {
+    @apply inline-block w-auto capitalize text-fuchsia-800;
+}
+
 
 
 
@@ -36,7 +33,7 @@
 
 // HOME 
     .containerImageSlider {
-        @apply w-5/12 h-72 mx-auto;
+        @apply w-[600px] h-[300px] mx-auto;
     }
     .componentTitle{
         @apply text-3xl text-center font-semibold mb-4;
